@@ -10,7 +10,7 @@ const Search = function Search({
 }) {
   const showSearchResults = () => {
     const searchResults = allResults.filter(
-      (emoji) => emoji.keywords.toLowercase().includes(searchText.toLowercase())
+      (emoji) => emoji.keywords.toLowerCase().includes(searchText.toLowerCase()),
     );
     console.log(searchResults);
     if (searchResults.length === 0) {
