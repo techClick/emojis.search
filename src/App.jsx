@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Search from './components/Search/Search';
-import ResultsTable from './components/EmojiTable/EmojiTable';
+import EmojiTable from './components/EmojiTable/EmojiTable';
 import * as S from './styled';
 import emojiList from './assets/emoji-list.json';
 import WhiteCard from './components/WhiteCard/WhiteCard';
@@ -20,7 +20,7 @@ const App = function App() {
         />
       )}
       { (results.length > 0 && results[0] !== 'Empty') && (
-        <ResultsTable results={results} setResults={setResults} searchText={searchText} />
+        <EmojiTable results={results} setResults={setResults} searchText={searchText} />
       )}
       { (results.length > 0 && results[0] === 'Empty') && (
         <WhiteCard width="50%" goBack={() => setResults([])}>
