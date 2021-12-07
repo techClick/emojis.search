@@ -21,24 +21,30 @@ describe('unit tests', () => {
     expect(submitButton).toBeTruthy();
   });
   test('search input displays correctly', () => {
-    render(<Search
-      allResults={[]}
-      setSearchResults={() => {}}
-      searchText="test"
-      setSearchText={() => {}}
-    />);
+    render(
+      <Search
+        allResults={[]}
+        setSearchResults={() => {}}
+        searchText="test"
+        setSearchText={() => {}}
+      />,
+    );
     const searchInput = screen.queryByTitle('searchInput');
     expect(searchInput.value).toBe('test');
   });
   test('search input changes correctly', () => {
     // eslint-disable-next-line no-var
     var searchText = 'NOTtest';
-    render(<Search
-      allResults={[]}
-      setSearchResults={() => {}}
-      searchText={searchText}
-      setSearchText={(newSearchText) => { searchText = newSearchText; }}
-    />);
+    render(
+      <Search
+        allResults={[]}
+        setSearchResults={() => {}}
+        searchText={searchText}
+        setSearchText={(newSearchText) => {
+          searchText = newSearchText;
+        }}
+      />,
+    );
     const searchInput = screen.queryByTitle('searchInput');
     fireEvent.change(searchInput, { target: { value: 'test' } });
     expect(searchText).toBe('test');

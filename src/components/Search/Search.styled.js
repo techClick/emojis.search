@@ -3,13 +3,13 @@ import styled from 'styled-components';
 export const Container = styled.div`
   width: 80vw;
   position: absolute;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-  top:50%;
-  left:50%;
+  top: 50%;
+  left: 50%;
   min-width: 800px;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 `;
 
 export const SearchBox = styled.input`

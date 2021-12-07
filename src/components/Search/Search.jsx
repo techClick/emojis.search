@@ -3,7 +3,10 @@ import WhiteCard from '../WhiteCard/WhiteCard';
 import * as S from './Search.styled';
 
 const Search = function Search({
-  searchText, setSearchText, allResults, setSearchResults,
+  searchText,
+  setSearchText,
+  allResults,
+  setSearchResults,
 }) {
   const showSearchResults = () => {
     const searchResults = allResults.filter((emoji) => emoji.keywords.includes(searchText));
@@ -25,10 +28,7 @@ const Search = function Search({
           onChange={(e) => setSearchText(e.target.value)}
         />
         <div>
-          <S.Submit
-            title="submitButton"
-            onClick={() => showSearchResults()}
-          >
+          <S.Submit title="submitButton" onClick={() => showSearchResults()}>
             Submit
           </S.Submit>
         </div>

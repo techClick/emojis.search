@@ -11,7 +11,7 @@ const App = function App() {
 
   return (
     <S.Container>
-      { results.length === 0 && (
+      {results.length === 0 && (
         <Search
           allResults={emojiList}
           setSearchResults={setResults}
@@ -19,14 +19,16 @@ const App = function App() {
           setSearchText={setSearchText}
         />
       )}
-      { (results.length > 0 && results[0] !== 'Empty') && (
-        <EmojiTable results={results} setResults={setResults} searchText={searchText} />
+      {results.length > 0 && results[0] !== 'Empty' && (
+        <EmojiTable
+          results={results}
+          setResults={setResults}
+          searchText={searchText}
+        />
       )}
-      { (results.length > 0 && results[0] === 'Empty') && (
+      {results.length > 0 && results[0] === 'Empty' && (
         <WhiteCard width="50%" goBack={() => setResults([])}>
-          <S.EmptyBlock>
-            No keywords found with your search
-          </S.EmptyBlock>
+          <S.EmptyBlock>No keywords found with your search</S.EmptyBlock>
         </WhiteCard>
       )}
     </S.Container>

@@ -10,7 +10,7 @@ export const Container = styled.div`
 `;
 
 export const EmptyBlock = styled.div`
-  margin-top:80px;
+  margin-top: 80px;
   color: black;
   font-size: 13px;
 `;

@@ -12,6 +12,16 @@ const fadeIn = keyframes`
   }
 `;
 
+const fadeIn2 = keyframes`
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+`;
+
 export const Container = styled.div`
   background-color: white;
   padding: 30px;
@@ -19,7 +29,8 @@ export const Container = styled.div`
   width: ${(props) => props.width || ''};
   text-align: center;
   position: relative;
-  animation: ${fadeIn} 0.1s linear;
+  animation: ${(props) => (props.fadeIn2 ? fadeIn2 : fadeIn)}
+    ${(props) => (props.fadeIn2 ? '0.3s' : '0.1s')} linear;
   transition: visibility 0.1s linear;
 `;
 

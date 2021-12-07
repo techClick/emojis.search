@@ -10,15 +10,17 @@ const Results = function Results({ results, setResults, searchText }) {
     { title: 'KEYWORDS', field: 'keywords' },
   ];
   return (
-    <WhiteCard width="70%" goBack={() => setResults([])}>
+    <WhiteCard width="70%" fadeIn2 goBack={() => setResults([])}>
       <ResultsTable>
         <MaterialTable
           // eslint-disable-next-line prefer-template
           title={'Results for "' + searchText + '"'}
           columns={columns}
           data={results}
-          // eslint-disable-next-line prefer-template
-          localization={{ toolbar: { searchPlaceholder: 'Keywords in "' + searchText + '"' } }}
+          localization={{
+            // eslint-disable-next-line prefer-template
+            toolbar: { searchPlaceholder: 'Keywords in "' + searchText + '"' },
+          }}
         />
       </ResultsTable>
     </WhiteCard>
