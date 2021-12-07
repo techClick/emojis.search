@@ -9,7 +9,9 @@ const Search = function Search({
   setSearchResults,
 }) {
   const showSearchResults = () => {
-    const searchResults = allResults.filter((emoji) => emoji.keywords.includes(searchText));
+    const searchResults = allResults.filter(
+      (emoji) => emoji.keywords.toLowercase().includes(searchText.toLowercase())
+    );
     console.log(searchResults);
     if (searchResults.length === 0) {
       setSearchResults(['Empty']);
