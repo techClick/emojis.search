@@ -1,4 +1,16 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const fadeIn = keyframes`
+  from {
+    transform: scale(.25);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+`;
 
 export const Container = styled.div`
   background-color: white;
@@ -7,6 +19,8 @@ export const Container = styled.div`
   width: ${(props) => props.width || ''};
   text-align: center;
   position: relative;
+  animation: ${fadeIn} 0.1s linear;
+  transition: visibility 0.1s linear;
 `;
 
 export const GoBack = styled.div`
