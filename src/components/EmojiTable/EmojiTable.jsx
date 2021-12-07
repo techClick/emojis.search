@@ -21,6 +21,11 @@ const Results = function Results({ results, setResults, searchText }) {
             // eslint-disable-next-line prefer-template
             toolbar: { searchPlaceholder: 'Keywords in "' + searchText + '"' },
           }}
+          options={{
+            rowStyle: {
+              fontSize: 15,
+            },
+          }}
         />
       </ResultsTable>
     </WhiteCard>
