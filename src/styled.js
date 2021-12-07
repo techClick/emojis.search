@@ -6,7 +6,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 60px 0;
+  padding: 30px 0;
 `;
 
 export const EmptyBlock = styled.div`
