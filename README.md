@@ -2,4 +2,6 @@
 
 An application that let's you search through an emoji list.
 
-Developing this was very interesting, then again React is always interesting :-).
+# Project built with React
+
+Using React is always interesting.
